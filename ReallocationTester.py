@@ -2,7 +2,7 @@
 """
 Created on Sun Jun 10 10:20:36 2018
 
-@author: mark-tom
+@author: Cubie | Tom Aarsen
 """
 
 import requests, time, random, math
@@ -18,9 +18,8 @@ class Crypto:
         print("Symbol:",symbol)
     
     # Fetch Historical data, store it, and return the length of the close list
-    def FetchData(self):
-        url = "https://api.binance.com/api/v1/klines?interval=6h&limit=1000&symbol="
-        url += self.symbol + "BTC"
+    def FetchData(self, timeframe):
+        url = "https://api.binance.com/api/v1/klines?interval={}&limit=1000&symbol={}".format(timeframe,self.symbol+"BTC")
         jsonDataList = FetchData(url).json()
         for jsonData in jsonDataList:
             self.close.append(float(jsonData[4]))
@@ -40,7 +39,7 @@ class Crypto:
 def FetchData(url):
     for i in range(20):
         try:
-            jsonData = requests.get(url).json()
+            jsonData = requests.get(url)
             return jsonData
         except:
             print("Sleeping due to Connection refusal")
@@ -52,7 +51,11 @@ def Main():
     # cryptoList will be a list of crypto class objects, each holding data of a specific coin
     cryptoList = []
     
+    # Edit this variable to change the amount of randomly picked coins that the script uses.
     randomCoinAmount = 3
+    
+    # Edit this timeframe to change what timeframe the bot works with.
+    timeframe = "6h"
     
     # Fill in the symbols you want to check in symbolList like this:
     # symbolList = ['ETH', 'XRP', 'EOS']
@@ -79,7 +82,7 @@ def Main():
     # Fetching historical data for the coins
     lengthList = []
     for x, i in enumerate(cryptoList):
-        lengthList.append(i.FetchData())
+        lengthList.append(i.FetchData(timeframe))
         
         # You can comment the line above this and uncomment
         # the line below this, to have it generate a 
@@ -136,32 +139,39 @@ def Main():
     keyList = []
     
     # Adding Value (Performance with bot) and Base (Performance without bot)
-    keyList.append("Value")
-    keyList.append("Base")
+    keyList.append("Performance with Bot")
+    keyList.append("Performance without Bot")
     
     for i in cryptoList:
         key = 'Close of '+ i.symbol
         # Adjust the Close Column of each coin to start at value 1
         df[key] = df[key] * (1 / df[key].iloc[0])
         # Adding the Close of each coin to be plotted
+        # Comment out the next line to prevent the Close for each coin
+        # to be plotted.
         keyList.append(key)
     
     # Calculate Value and Base between the coins
-    df["Value"] = df["Value of "+cryptoList[0].symbol]
-    df["Base"] = df["Close of "+cryptoList[0].symbol]
+    df["Performance with Bot"] = df["Value of "+cryptoList[0].symbol]
+    df["Performance without Bot"] = df["Close of "+cryptoList[0].symbol]
     for x, i in enumerate(cryptoList):
         if x == 0:
             continue
-        df["Value"] += df["Value of "+i.symbol]
-        df["Base"] += df["Close of "+i.symbol]
+        df["Performance with Bot"] += df["Value of "+i.symbol]
+        df["Performance without Bot"] += df["Close of "+i.symbol]
     
-    df["Value"] = df["Value"] / len(cryptoList)
-    df["Base"] = df["Base"] / len(cryptoList)
+    df["Performance with Bot"] = df["Performance with Bot"] / len(cryptoList)
+    df["Performance without Bot"] = df["Performance without Bot"] / len(cryptoList)
     
     # Plotting the data
     df[keyList].plot(figsize=(10,5))
-    p.title("Close & Value")
+    p.title("Reallocation Bot Performance")
     p.show()
-       
+    
+    # Printing data about Performance
+    print("Final Gains with Bot    : {:.2f}%".format(df['Performance with Bot'].iloc[-1] * 100))
+    print("Final Gains without Bot : {:.2f}%".format(df['Performance without Bot'].iloc[-1] * 100))
+    print("Difference in gains     : {:.2f}%".format(df['Performance with Bot'].iloc[-1]/df['Performance without Bot'].iloc[-1] * 100 - 100))
+    
 if __name__ == "__main__":
 	Main()
