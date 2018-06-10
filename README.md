@@ -10,9 +10,9 @@ Luckily, there's a method to help prevent this. <br>
 <b>Portfolio Reallocation</b><br>
 The concept of this method is simple. The value of your holdings should follow a specific, predetermined ratio. 
 This ratio can be anything. 
-If you have two coins, with a ratio of 1:1, and one of them goes up in value, the ratio will shift to for example
-1.04:1. A reallocation bot will then sell some of the coin that performed well, and invest it in the coin that didn't. 
-The new ratio will be 1.02:1.02 (back to equal on both sides).<br>
+If you have two coins, with a ratio of 1:1, and one of them goes up in value, the ratio will shift from 50% and 50% to for example
+54% and 46%. A reallocation bot will then sell some of the coin that performed well, and invest it in the coin that didn't. 
+The new percent will yet again be 50% and 50% (back to equal on both sides, 1:1).<br>
 
 That's the concept. If you think about it properly, you realise that this bot will sell whenever a coin goes up, and buy whenever a coin goes down.
 This means the bot will automatically take profits of profitable coins, and reinvest lower for coins that performed poorly.
