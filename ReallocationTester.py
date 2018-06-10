@@ -170,7 +170,6 @@ def Main():
     # Printing data about Performance
     print("Final Gains with Bot    : {:.2f}x".format(df['Performance with Bot'].iloc[-1]))
     print("Final Gains without Bot : {:.2f}x".format(df['Performance without Bot'].iloc[-1]))
-    print("Difference in Gains     : {:.2f}%".format(df['Performance with Bot'].iloc[-1]/df['Performance without Bot'].iloc[-1] * 100 - 100))
     
 if __name__ == "__main__":
 	Main()
