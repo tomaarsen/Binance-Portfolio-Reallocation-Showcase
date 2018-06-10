@@ -29,7 +29,7 @@ by editing the `symbolList` variable.<br>
 It turns out, in a large amount of cases, it would have been more profitable to hold coins with this bot active, than just holding the coins, even with fees.
 <br><br>
 <b>Requirements</b><br>
--Python 3+<br>
+-Python 3.6+ (Required for Pandas)<br>
 -Requests Module<br>
 -Matplotlib Module<br>
 -Pandas Module<br>
