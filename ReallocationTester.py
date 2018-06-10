@@ -125,7 +125,6 @@ def Main():
     # Create Pandas DataFrame to use for plotting
     df = pd.DataFrame({})
     
-    
     maxList = []
     for i in cryptoList:
         # Filling DataFrame with Close and Value data of all coins
