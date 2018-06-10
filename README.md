@@ -34,4 +34,7 @@ It turns out, in a large amount of cases, it would have been more profitable to 
 -Matplotlib Module<br>
 -Pandas Module<br>
 <br>
-<b>Graph gallery yet to come</b>
+<b>Graph gallery</b><br>
+Disclaimer: The only graphs I did not include were graphs where one of the coins only had historical data for <100 entries. Beyond that I picked the 20 first graphs that got generated.<br>
+https://imgur.com/gallery/JSNaXpk<br>
+The graphs include 3 coins, set at a ratio of 1:1:1. A bot could hypothetically have different ratios too, depending on what coins you're more bullish on.<br>
