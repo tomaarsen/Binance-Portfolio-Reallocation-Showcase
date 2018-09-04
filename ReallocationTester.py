@@ -109,8 +109,7 @@ def Main():
             # Value = amount dedicated to this coin * difference between current close and previous close
             i.value.append(i.amount[x-1] * (i.close[x]  / i.close[x-1]))
             val += i.value[-1]
-        
-        
+			   
         for i in cryptoList:
             fee = 0
             # Use val variable to calculate average value
