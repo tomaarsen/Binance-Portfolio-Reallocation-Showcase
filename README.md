@@ -1,5 +1,5 @@
 # Binance-Portfolio-Reallocation-Showcase
-Many of us likely have some long-term crypto holds. 
+Some of us may have some long-term crypto holds. 
 A common strategy for these coins is to buy a roughly equal amount of all of them, and just hold on for a long time.
 This strategy isn't flawless, however. 
 Let's assume you pick 5 coins, each 20% of your portfolio. 
@@ -7,7 +7,7 @@ If 4 of the 5 don't end up moving much, but one of them explodes 300%, then the 
 <br><br>
 Luckily, there's a method to help prevent this. <br>
 
-<b>Portfolio Reallocation</b><br>
+### Portfolio Reallocation
 The concept of this method is simple. The value of your holdings should follow a specific, predetermined ratio. 
 This ratio can be anything. 
 If you have two coins, with a ratio of 1:1, and one of them goes up in value, the ratio will shift from 50% and 50% to for example
@@ -28,13 +28,13 @@ It's possible to edit the amount of coins it randomly picks, by editing the `ran
 by editing the `symbolList` variable.<br>
 It turns out, in a large amount of cases, it would have been more profitable to have this hypothetical bot active on the coins, instead of just holding the coins, even with fees.
 <br><br>
-<b>Requirements</b><br>
+### Requirements
 -Python 3.6+ (Required for Pandas)<br>
 -Requests Module<br>
 -Matplotlib Module<br>
--Pandas Module<br>
-<br>
-<b>Graph gallery</b><br>
+-Pandas Module
+
+### Graph gallery
 Disclaimer: The only graphs I did not include were graphs where one of the coins only had historical data for <100 entries. Beyond that I picked the 20 first graphs that got generated.<br>
 The graphs include 3 coins, set at a ratio of 1:1:1. A bot could hypothetically have different ratios too, depending on what coins you're more bullish on.<br>
 Consider focusing on the Blue and Yellow lines. Blue showcases the hypothetical bot performance, while yellow shows the performance of holding the coins without any trades. <br>
@@ -50,122 +50,128 @@ The data from these 20 tests is as follows:<br>
   </tr>
   <tr>
     <td>1</td>
-    <td><b>0.56x</b></td>
-    <td>0.54x</td>
-    <td><b>1.03x</b></td>
+    <td><b>0.56</b></td>
+    <td>0.54</td>
+    <td><b>1.03</b></td>
   </tr>
   <tr>
     <td>2</td>
-    <td>0.61x</td>
-    <td><b>0.85x</b></td>
-    <td>0.72x</td>
+    <td>0.61</td>
+    <td><b>0.85</b></td>
+    <td>0.72</td>
   </tr>
   <tr>
     <td>3</td>
-    <td><b>0.80x</b></td>
-    <td>0.59x</td>
-    <td><b>1.36x</b></td>
+    <td><b>0.80</b></td>
+    <td>0.59</td>
+    <td><b>1.36</b></td>
   </tr>
   <tr>
     <td>4</td>
-    <td><b>1.75x</b></td>
-    <td>1.22x</td>
-    <td><b>1.43x</b></td>
+    <td><b>1.75</b></td>
+    <td>1.22</td>
+    <td><b>1.43</b></td>
   </tr>
   <tr>
     <td>5</td>
-    <td><b>1.77x</b></td>
-    <td>1.30x</td>
-    <td><b>1.36x</b></td>
+    <td><b>1.77</b></td>
+    <td>1.30</td>
+    <td><b>1.36</b></td>
   </tr>
   <tr>
     <td>6</td>
-    <td><b>3.33x</b></td>
-    <td>3.06x</td>
-    <td><b>1.08x</b></td>
+    <td><b>3.33</b></td>
+    <td>3.06</td>
+    <td><b>1.08</b></td>
   </tr>
   <tr>
     <td>7</td>
-    <td><b>2.91x</b></td>
-    <td>2.42x</td>
+    <td><b>2.91</b></td>
+    <td>2.42</td>
     <td><b>1.20</b></td>
   </tr>
   <tr>
     <td>8</td>
-    <td><b>2.99x</b></td>
-    <td>2.76x</td>
+    <td><b>2.99</b></td>
+    <td>2.76</td>
     <td><b>1.08</b></td>
   </tr>
   <tr>
     <td>9</td>
-    <td><b>0.61x</b></td>
-    <td>0.58x</td>
-    <td><b>1.05x</b></td>
+    <td><b>0.61</b></td>
+    <td>0.58</td>
+    <td><b>1.05</b></td>
   </tr>
   <tr>
     <td>10</td>
-    <td><b>0.83x</b></td>
-    <td>0.69x</td>
-    <td><b>1.20x</b></td>
+    <td><b>0.83</b></td>
+    <td>0.69</td>
+    <td><b>1.20</b></td>
   </tr>
   <tr>
     <td>11</td>
-    <td><b>2.41x</b></td>
-    <td>1.94x</td>
-    <td><b>1.24x</b></td>
+    <td><b>2.41</b></td>
+    <td>1.94</td>
+    <td><b>1.24</b></td>
   </tr>
   <tr>
     <td>12</td>
-    <td><b>0.73x</b></td>
-    <td>0.71x</td>
-    <td><b>1.03x</b></td>
+    <td><b>0.73</b></td>
+    <td>0.71</td>
+    <td><b>1.03</b></td>
   </tr>
   <tr>
     <td>13</td>
-    <td>0.70x</td>
-    <td><b>0.70x</b></td>
-    <td>1.00x</td>
+    <td>0.70</td>
+    <td><b>0.70</b></td>
+    <td>1.00</td>
   </tr>
   <tr>
     <td>14</td>
-    <td><b>0.72x</b></td>
-    <td>0.57x</td>
-    <td><b>1.26x</b></td>
+    <td><b>0.72</b></td>
+    <td>0.57</td>
+    <td><b>1.26</b></td>
   </tr>
   <tr>
     <td>15</td>
-    <td>0.54x</td>
-    <td><b>0.68x</b></td>
-    <td>0.79x</td>
+    <td>0.54</td>
+    <td><b>0.68</b></td>
+    <td>0.79</td>
   </tr>
   <tr>
     <td>16</td>
-    <td>10.05x</td>
-    <td><b>12.29x</b></td>
-    <td>12.29x</td>
+    <td>10.05</td>
+    <td><b>12.29</b></td>
+    <td>0.82</td>
   </tr>
   <tr>
     <td>17</td>
-    <td><b>0.51x</b></td>
-    <td>0.42x</td>
-    <td><b>1.21x</b></td>
+    <td><b>0.51</b></td>
+    <td>0.42</td>
+    <td><b>1.21</b></td>
   </tr>
   <tr>
     <td>18</td>
-    <td><b>0.79x</b></td>
-    <td>0.52x</td>
-    <td><b>1.52x</b></td>
+    <td><b>0.79</b></td>
+    <td>0.52</td>
+    <td><b>1.52</b></td>
   </tr>
   <tr>
     <td>19</td>
-    <td><b>0.49x</b></td>
-    <td>0.45x</td>
-    <td><b>1.09x</b></td>
+    <td><b>0.49</b></td>
+    <td>0.45</td>
+    <td><b>1.09</b></td>
   </tr>
   <tr>
     <td>20</td>
-    <td><b>1.04x</b></td>
-    <td>0.76x</td>
-    <td><b>1.37x</b></td>
+    <td><b>1.04</b></td>
+    <td>0.76</td>
+    <td><b>1.37</b></td>
+  </tr>
+  <tr>
+    <td><b>Average</b></td>
+    <td>-</td>
+    <td>-</td>
+    <td><b>1.142</b></td>
   </tr>
 </table>
