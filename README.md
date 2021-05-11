@@ -4,10 +4,12 @@ A common strategy for these coins is to buy a roughly equal amount of all of the
 This strategy isn't flawless, however. 
 Let's assume you pick 5 coins, each 20% of your portfolio. 
 If 4 of the 5 don't end up moving much, but one of them explodes 300%, then the value of your portfolio heavily depends on that one coin. It now represents a massive 43% of your portfolio, meaning that your attempts to diversify your portfolio will largely be undone.
-<br><br>
-Luckily, there's a method to help prevent this. <br>
 
-### Portfolio Reallocation
+Luckily, there's a method to help prevent this.
+
+---
+
+## Portfolio Reallocation
 The concept of this method is simple. The value of your holdings should follow a specific, predetermined ratio. 
 This ratio can be anything. 
 If you have two coins, with a ratio of 1:1, and one of them goes up in value, the ratio will shift from 50% and 50% to for example
@@ -24,17 +26,20 @@ Wouldn't it be more profitable to just hold and not bother?<br><br>
 Great questions. I didn't know either. <br><br>
 So, to test it, I wrote a script to plot the performance of this bot, relative to just holding. 
 The script by default picks out 3 Binance coins at random, uses as much historical data as is available, and plots the performance relative to just holding.
-It's possible to edit the amount of coins it randomly picks, by editing the `randomCoinAmount` variable, and it's possible to have the script look at the coins you want,
-by editing the `symbolList` variable.<br>
+It's possible to edit the amount of coins it randomly picks, by editing the `randomCoinAmount` variable, and it's possible to have the script look at the coins you want, by editing the `symbolList` variable.<br>
 It turns out, in a large amount of cases, it would have been more profitable to have this hypothetical bot active on the coins, instead of just holding the coins, even with fees.
-<br><br>
-### Requirements
--Python 3.6+ (Required for Pandas)<br>
--Requests Module<br>
--Matplotlib Module<br>
--Pandas Module
 
-### Graph gallery
+---
+
+## Requirements
+- Python 3.6+ (Required for Pandas)<br>
+- Requests Module<br>
+- Matplotlib Module<br>
+- Pandas Module
+
+---
+
+## Graph gallery
 Disclaimer: The only graphs I did not include were graphs where one of the coins only had historical data for <100 entries. Beyond that I picked the 20 first graphs that got generated.<br>
 The graphs include 3 coins, set at a ratio of 1:1:1. A bot could hypothetically have different ratios too, depending on what coins you're more bullish on.<br>
 Consider focusing on the Blue and Yellow lines. Blue showcases the hypothetical bot performance, while yellow shows the performance of holding the coins without any trades. <br>
