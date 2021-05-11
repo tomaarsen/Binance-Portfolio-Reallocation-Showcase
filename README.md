@@ -10,23 +10,18 @@ Luckily, there's a method to help prevent this.
 ---
 
 ## Portfolio Reallocation
-The concept of this method is simple. The value of your holdings should follow a specific, predetermined ratio. 
-This ratio can be anything. 
-If you have two coins, with a ratio of 1:1, and one of them goes up in value, the ratio will shift from 50% and 50% to for example
-54% and 46%. A reallocation bot will then sell some of the coin that performed well, and invest it in the coin that didn't. 
-The new percent will yet again be 50% and 50% (back to equal on both sides, 1:1).<br>
+The concept of this method is simple. The value of your holdings should follow a specific, predetermined ratio. This ratio can be anything. If you have two coins, with a ratio of 1:1, and one of them goes up in value, the ratio will shift from 50% and 50% to for example 54% and 46%. A reallocation bot will then sell some of the coin that performed well, and invest it in the coin that didn't. The new percent will yet again be 50% and 50% (back to equal on both sides, 1:1).
 
-That's the concept. If you take a moment to think about it, you realise that this bot will sell whenever a coin goes up, and buy whenever a coin goes down.
-This means the bot will automatically take profits from profitable coins, and reinvest this money in coins that performed poorly.
-This bot is essentially the definition of "Buy low, sell high".<br>
+That's the concept. If you take a moment to think about it, you realise that this bot will sell whenever a coin goes up, and buy whenever a coin goes down. This means the bot will automatically take profits from profitable coins, and reinvest this money in coins that performed poorly. This bot is essentially the definition of "Buy low, sell high".
 
 <b>But</b>, what about transaction fees? Wouldn't they eat into your profits?<br>
 And what if a coin just goes up a bunch, and the bot keeps selling parts for a coin that isn't moving at all? 
-Wouldn't it be more profitable to just hold and not bother?<br><br>
-Great questions. I didn't know either. <br><br>
-So, to test it, I wrote a script to plot the performance of this bot, relative to just holding. 
-The script by default picks out 3 Binance coins at random, uses as much historical data as is available, and plots the performance relative to just holding.
-It's possible to edit the amount of coins it randomly picks, by editing the `randomCoinAmount` variable, and it's possible to have the script look at the coins you want, by editing the `symbolList` variable.<br>
+Wouldn't it be more profitable to just hold and not bother?
+
+Great questions. I didn't know either.
+
+So, to test it, I wrote a script to plot the performance of this bot, relative to just holding. The script by default picks out 3 Binance coins at random, uses as much historical data as is available, and plots the performance relative to just holding. It's possible to edit the amount of coins it randomly picks, by editing the `randomCoinAmount` variable, and it's possible to have the script look at the coins you want, by editing the `symbolList` variable.
+
 It turns out, in a large amount of cases, it would have been more profitable to have this hypothetical bot active on the coins, instead of just holding the coins, even with fees.
 
 ---
@@ -40,10 +35,8 @@ It turns out, in a large amount of cases, it would have been more profitable to 
 ---
 
 ## Graph gallery
-Disclaimer: The only graphs I did not include were graphs where one of the coins only had historical data for <100 entries. Beyond that I picked the 20 first graphs that got generated.<br>
-The graphs include 3 coins, set at a ratio of 1:1:1. A bot could hypothetically have different ratios too, depending on what coins you're more bullish on.<br>
-Consider focusing on the Blue and Yellow lines. Blue showcases the hypothetical bot performance, while yellow shows the performance of holding the coins without any trades. <br>
-https://imgur.com/gallery/JSNaXpk<br>
+Disclaimer: The only graphs I did not include were graphs where one of the coins only had historical data for less than 100 entries. Beyond that I picked the 20 first graphs that got generated. The graphs include 3 coins, set at a ratio of 1:1:1. A bot could hypothetically have different ratios too, depending on what coins you're more bullish on. Consider focusing on the Blue and Yellow lines. Blue showcases the hypothetical bot performance, while yellow shows the performance of holding the coins without any trades. <br>
+The [gallery](https://imgur.com/gallery/JSNaXpk).
 
 The data from these 20 tests is as follows:<br>
 <table>
